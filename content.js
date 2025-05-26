@@ -1,0 +1,1 @@
+document.getElementsByClassName("scaffold-finite-scroll")[0].remove()
