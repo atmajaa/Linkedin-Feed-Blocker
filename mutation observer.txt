@@ -1,0 +1,30 @@
+MutationObserver Basics
+MutationObserver watches for changes in the DOM tree, not user events like clicks or hovers.
+
+It is event-driven, not polling—meaning the browser notifies it only when relevant mutations happen.
+
+It detects:
+
+Nodes added or removed (child list mutations)
+
+Attribute changes (e.g., class updates)
+
+Text content changes (character data)
+
+It does NOT detect changes to input element values or user interactions themselves.
+
+MutationObserver Options
+childList: true — observe nodes being added or removed directly under the observed element(s).
+
+attributes: true — observe changes to attributes on the observed element(s).
+
+characterData: true — observe changes to text content inside the observed element(s).
+
+subtree: true — extend observation to all descendants (nested children) of the observed element(s), not just immediate children.
+
+How subtree works with other options
+subtree only expands the scope of enabled mutation types deeper into the tree.
+
+If childList is false, setting subtree: true won’t detect any added or removed nodes anywhere.
+
+You must enable the mutation type (childList, attributes, or characterData) for subtree to have any effect.
